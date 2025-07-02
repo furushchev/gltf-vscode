@@ -20,9 +20,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
-    alias: {
-      cesium: path.resolve(__dirname, 'node_modules/cesium/Source')
-    }
+    modules: [
+      path.resolve(__dirname, 'src'),
+      'node_modules',
+    ],
   },
   amd: {
     toUrlUndefined: true
@@ -35,14 +36,11 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
-        { from: path.join(cesium, 'Workers'), to: 'Workers' },
-        { from: path.join(cesium, 'Assets'), to: 'Assets' },
-        { from: path.join(cesium, 'Widgets'), to: 'Widgets' },
-        { from: path.join(cesium, 'ThirdParty'), to: 'ThirdParty' }
+        { from: 'node_modules/cesium/Build/Cesium', to: 'cesium' },
       ]
     }),
     new webpack.DefinePlugin({
-      CESIUM_BASE_URL: JSON.stringify('')
+      CESIUM_BASE_URL: JSON.stringify('cesium')
     })
   ]
 };

@@ -12,7 +12,7 @@ import {
   HemisphericLight,
 } from 'babylonjs';
 import 'babylonjs-loaders';
-import * as Cesium from 'cesium/Cesium.js';
+import * as Cesium from 'cesium';
 
 interface ViewerProps {
   file: File | null;
