@@ -1,0 +1,28 @@
+{
+  "name": "gltf-webapp",
+  "private": true,
+  "version": "0.1.0",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^0.167.0",
+    "babylonjs": "^7.17.2",
+    "babylonjs-loaders": "^7.17.2",
+    "cesium": "^1.131.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "ts-loader": "^9.5.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/three": "^0.161.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.13.3",
+    "copy-webpack-plugin": "^11.0.0"
+  },
+  "scripts": {
+    "start": "webpack serve --mode development --open",
+    "build": "webpack --mode production"
+  }
+}

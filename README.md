@@ -271,6 +271,24 @@ Support for additional extensions can be requested by filing an issue or pull re
 
 on [GitHub](https://github.com/AnalyticalGraphicsInc/gltf-vscode).  See [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Standalone Web Viewer
+
+The preview functionality has been repackaged as a small React application in
+the `webapp/` folder.  The viewer loads `.gltf` or `.glb` files from your local
+disk using the browser's File Upload API and renders them with Three.js, Babylon.js, or CesiumJS.
+
+### Build and run
+
+```
+cd webapp
+npm install
+npm run build
+```
+
+You can also run `npm start` in the `webapp` folder to launch a development
+server. After building, open `webapp/dist/index.html` in your browser to see the
+viewer.
+
 ## Acknowledgements
 
 This extension makes use of the following open source projects:
